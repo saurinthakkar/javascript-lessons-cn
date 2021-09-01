@@ -99,7 +99,7 @@
 // scopeDemo()
 // console.log(nameVar);
 
-/*2nd Example*/ 
+/*2nd Example*/
 
 // function c(){
 //     console.log("Inside c")
@@ -149,3 +149,175 @@
 
 // outerVar()
 // console.log(nameVar)
+
+/*---Function expression---*/
+
+//Example-1 - Named function expression
+
+// var factorial = function fact(n) {
+//     var ans = 1;
+//     for(var i = 1; i<=n ; i++){
+//         ans = ans*i;
+//     }
+//     return ans;
+// }
+
+// console.log(factorial(5))
+// console.log(factorial)
+// console.log(fact(4))
+
+//Example-2 -  Anonymous function expression
+
+// var factorial2 = function(n) {
+//     var ans = 1;
+//     for(var i = 1; i<=n ; i++){
+//         ans = ans*i;
+//     }
+//     return ans;
+// }
+
+// console.log(factorial)
+// console.log(factorial2)
+
+//Example -3 with recursion
+
+// var factorial2 = function(n) {
+//         var ans = 1;
+//         for(var i = 1; i<=n ; i++){
+//             ans = ans*i;
+//         }
+//         return ans;
+// }
+
+// var factorial = function fact(n) {
+//     if (n == 0) {
+//         return 1;
+//     }
+
+//     else n * fact (n-1)
+// }
+
+// console.log(factorial2(4));
+// console.log(factorial(-1));
+
+// console.log(factDeclar(5));
+// console.log(factExp(7));
+
+// function factDeclar(n){
+//     var ans = 1;
+//     for(var i = 1; i <=n ; i++){
+//         ans = ans*i ;
+//     }
+//     return ans;
+// }
+
+// var factExp = function fact(n){
+//     var ans = 1;
+//     for(var i =1; i <= n;i++){
+//         ans = ans*i;
+//     }
+//     return ans;
+// }
+
+
+//Functions as arguments
+
+//Example-1
+
+// var add = function (a, b) {
+//     return a+b;
+// }
+
+// var subtract = function (a, b) {
+//     return a-b;
+// }
+
+// var op = function (func) {
+//     var x = 2;
+//     var y = 3;
+//     return func(x, y);
+// }
+// console.log(op(add));
+
+//Example-2
+
+// var fact = function factorial(n){
+//     var ans = 1;
+//     for(var i=1 ; i<=n ; i++){
+//         ans =  ans * i;
+//     }
+//     return ans;
+// }
+
+// var ncr = function (n , r ,func){
+
+//     return func(n) / (func(r) * func(n-r))
+// }
+
+// console.log(ncr(5 ,2 , fact))
+
+/*Arrays*/
+
+// var arr = [1,8,9,0,7]
+
+// function print(element){
+//     console.log(element)
+// }
+
+// arr.forEach(print)
+
+/*---Objects---*/
+
+var student = {
+    "nameVar": 'Saurin',
+    rollNo: 250,
+    marks: 90,
+    "2": 'thakkar'
+};
+
+// var proVar = 'rollNo'
+
+// printProperty(student, proVar)
+
+// function printProperty(obj, prop) {
+//     console.log(obj[prop])
+
+// }
+
+// var obj = {
+//     p1 : 100
+// };
+
+
+/*---Iterating over objects---*/
+
+// for(var prop in student){
+//     console.log(prop,student[prop])
+// }
+
+// var keys = Object.keys(student);
+// console.log(keys)
+// var keys1 = Object.getOwnPropertyNames(student);
+// console.log(keys1)
+
+
+// var student = {
+//     name:"abc",
+//     rollno:135,
+//     marks:90,
+//     address:{
+//         city:"anand",
+//         pincode:388120
+//     }
+// }
+
+
+//Example -1 
+
+// var obj1 = {};
+// var obj2 = new Object();
+// var obj3 = {};
+// console.log(typeof obj1,typeof obj2,typeof obj3)
+// console.log(obj1==obj2, obj1 == obj3);
+
+//
