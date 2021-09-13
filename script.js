@@ -321,3 +321,240 @@ var student = {
 // console.log(obj1==obj2, obj1 == obj3);
 
 //
+
+//
+
+// var arrVar = [20,30,40,50];
+
+// var objVar = {
+//     "0" : 20,
+//     "1" : 30,
+//     "2" : 40,
+//     "3" : 50
+// };
+
+//SetTimeOut 
+
+// function sayHello(){
+//     console.log("Hello")
+// }
+
+// setTimeout(sayHello,2000)
+
+//SetInterval
+
+// var sec = 1;
+// function sayHello(){
+//     console.log("after",sec)
+//     sec++;
+// }
+
+// setInterval(sayHello,1000)
+
+
+// var sec = 1;
+// function sayHello(){
+//     console.log("after",sec)
+//     sec++;
+//     if(sec == 6){
+//         clearInterval(id)
+//     }
+// }
+
+// var id = setInterval (sayHello , 1000)
+// console.log("Id:",id)
+
+//Reverse Countdown timer
+
+// var i = 10;
+// function sayCount(){
+
+//     console.log(i)
+//     i--;
+//     if(i === 0){
+//         console.log("Time up")
+//         clearInterval(id)
+//     }
+// }
+
+
+// var id = setInterval(sayCount,1000)
+
+// var obj1 = {};
+// var obj2 = new Object();
+// console.log(typeof obj1 , typeof obj2)
+
+//DOM
+
+//MCQ = 1
+// function test() {
+//     return this;
+// }
+
+// console.log(test() === window)
+
+// var y = document.getElementById("one");
+// y.style.color = "red";
+
+
+// var x = document.querySelector("#myheading");
+// y.innerText = "Hello brother";
+// varHead.style.backgroundColor = 'red';
+
+//Add event Listner
+
+
+// function sayHello(){
+//     alert("Hello")
+// }
+
+// function sayBye(){
+//     alert("Bye")
+// }
+
+// var helloButton = document.getElementById('btn-2');
+
+
+// helloButton.addEventListener('click',sayHello)
+// helloButton.addEventListener('click',sayBye)
+
+//Closures
+
+//Example-1
+
+// var var1 = 10;
+
+// function outer(){
+//     var b = 40;
+//     console.log(b);
+// }
+
+// console.log(var1)
+
+//Example-2
+
+// var a =10;
+// var b;
+// function outer(){
+//     var b = 30;
+//     function inner(a){
+//         var a = 30;
+//         console.log(a++ ,b++)
+//         }
+//         console.log(a, ++b);
+//         inner(a);
+// }
+// outer();
+// console.log(a++,b++);
+
+//File-1
+
+// var nameVar = "File1";
+
+// (function print(){
+//     setTimeout (function(){
+//         console.log(nameVar)
+//     },1000)
+
+// }) ();
+
+// {
+
+//     let nameVar = "File1";
+
+//     setTimeout(function () {
+//         console.log(nameVar)
+//     }, 1000);
+
+// }
+
+//Closue Example-1
+
+// var i=10;
+
+// function outer(){
+//     var j = 20;
+//     console.log(i,j)
+//     var inner = function(){
+//         var k =30;
+//         console.log(j,k)
+//     }
+//     return inner;
+// }
+
+// var inner = outer();
+// inner();
+
+//Closure Example-2
+
+// var i=10;
+
+// function outer(){
+//     var j=20;
+//     // console.log(i,j)
+//     var inner = function(){
+//         var k =30;
+//         console.log(i,j,k)
+//         k++;
+//         j++;
+//         i++;
+//     }
+//     return inner;
+// }
+
+// var inner = outer();
+// inner();
+// inner = outer();
+// inner();
+
+//Closure - Example -3
+
+// var add = (function ( ) {
+//     var counter = 0;
+//     return function ( ) {
+//          counter += 1; 
+//          return counter;
+//   }
+//   })();    
+//   console.log(add());
+//   console.log(add());
+//   console.log(add());
+
+//Closure Example -4
+
+// function test(){
+
+//     for(let i =1;i<=5;i++){
+//         setTimeout(function(){
+//             console.log(i);
+//         },1000)
+//     }
+
+//     // console.log("After for loop",i)
+
+// }
+
+// test()
+
+
+var arr = new Array(6);
+for (let i = 1; i <= 5; i++) {
+    i++;
+    // arr[i] = function () {
+    arr[i] = function(){    
+    console.log(i,arr[i])
+    }
+    i--;
+}
+
+  console.log(arr[3]())
+
+// var functions = {
+//     blah: function() { alert("blah"); },
+//     foo: function() { console.log("foo"); }
+// };
+
+// functions.blah();
+
+// functions["blah"]();
+
