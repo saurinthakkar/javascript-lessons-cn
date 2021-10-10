@@ -269,10 +269,10 @@
 /*---Objects---*/
 
 var student = {
-    "nameVar": 'Saurin',
-    rollNo: 250,
-    marks: 90,
-    "2": 'thakkar'
+  "nameVar": 'Saurin',
+  rollNo: 250,
+  marks: 90,
+  "2": 'thakkar'
 };
 
 // var proVar = 'rollNo'
@@ -537,17 +537,17 @@ var student = {
 // test()
 
 
-var arr = new Array(6);
-for (let i = 1; i <= 5; i++) {
-    i++;
-    // arr[i] = function () {
-    arr[i] = function(){    
-    console.log(i,arr[i])
-    }
-    i--;
-}
+// var arr = new Array(6);
+// for (let i = 1; i <= 5; i++) {
+//     i++;
+//     // arr[i] = function () {
+//     arr[i] = function(){    
+//     console.log(i,arr[i])
+//     }
+//     i--;
+// }
 
-  console.log(arr[3]())
+//   console.log(arr[3]())
 
 // var functions = {
 //     blah: function() { alert("blah"); },
@@ -558,3 +558,68 @@ for (let i = 1; i <= 5; i++) {
 
 // functions["blah"]();
 
+
+//This keyword
+
+//example-1
+
+// const video = {
+//   title: 'a',
+//   play() {
+//     console.log(this)
+//   }
+// }
+
+//video.play();
+
+// video.stop = function() {
+//   console.log(this)
+// }
+
+// video.stop();
+
+//example-2
+
+// function playVideo(){
+//   console.log(this)
+// }
+
+// playVideo()
+
+//example-3
+
+// function Video(title){
+//   this.title = title;
+//   console.log(this.title)
+// }
+
+// Video()
+
+//const v = new Video('b')
+
+// const video = {
+//   title: 'a',
+//   tags: ['a', 'b', 'c'],
+//   showTags() {
+//     this.tags.forEach (
+//       function(tag) {
+//         console.log(this.title,tag)
+//       });
+
+//   }
+// }
+
+// video.showTags.bind(video);
+
+class Vehicle{
+  constructor(company){
+    this.company = company;
+  }
+  getCompany(){
+    console.log('this',this);
+    console.log('this.company',this)
+  }
+}
+
+var car = new Vehicle('Audi')
+var func = car.getCompany.bind(Vehicle)
